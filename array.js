@@ -16,5 +16,5 @@ secretMessage.unshift('Programming')
 
 
 secretMessage.splice(secretMessage.indexOf('get'),5,'know,')
-c(secretMessage)
+
 c(secretMessage.join(' '))
