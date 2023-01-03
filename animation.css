@@ -1,0 +1,28 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border-radius:10%;
+}
+
+.box.small {
+  scale: .5;
+}
+
+.box.moved {
+  translate: 50px;
+}
+
+.box:hover {
+  animation: twirl 1500ms infinite alternate;
+}
+
+@keyframes twirl {
+  0% {
+    rotate: 0;
+  }
+  
+  100% {
+    rotate: 45deg;
+  }
+}
