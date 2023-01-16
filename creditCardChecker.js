@@ -24,8 +24,6 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 const batchObj = {valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5}
 
 // Add your functions below:
-
-
 function validateCred(arr){
   let arrCheck=[]
   let mulVal
@@ -54,12 +52,8 @@ for (let i=arr.length-1; i>=0;i--){
     }else{arrCheck.unshift(mulVal)}
   }
 }
-
   }
-// console.log(arr)
-// console.log(arrCheck)
 arrCheck.forEach(a=>sum+=a)
-// console.log(sum)
 if(sum%10===0){
   return true
 }else{
@@ -67,8 +61,6 @@ if(sum%10===0){
   }
 }
 let invArr=[];
-// console.log(validateCred(valid1))
-// console.log(validateCred(invalid1))
 function findInvalidCards(cardArr){
   let arrAns=[]
   let arrInv=[]
@@ -83,11 +75,7 @@ return {arrAns:arrAns,
 arrInv:arrInv,
 invArr:invArr}
 }
-
-
 console.log(findInvalidCards(batch))
-
-
   let arrComp=[]
 function idInvalidCardCompanies(arr){
 for (num of arr){
@@ -109,5 +97,4 @@ for (num of arr){
 }
 return arrComp
 }
-
 console.log(idInvalidCardCompanies(invArr))
