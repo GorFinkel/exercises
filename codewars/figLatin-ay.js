@@ -24,3 +24,19 @@ pigIt('Hello world !');     // elloHay orldway !
 // \s is any whitespace.
 // [^\w\s\'] is anything that's not a digit, letter, whitespace, underscore or a single quote.
 // [^\w\s\']|_ is the same as #3 except with the underscores added back in.
+
+
+
+function pigIt(str){
+  let strArr = str.split(' ');
+  let pigLatin = [];
+
+  for(let word of strArr){
+    if((/([a-zA-Z])/).test(word)){
+      pigLatin.push(word.substring(1) + word[0] + "ay");
+    }else{
+      pigLatin.push(word);
+    }
+  }
+  return pigLatin.join(" ");
+}
